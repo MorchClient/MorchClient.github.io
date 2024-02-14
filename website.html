@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morch Docs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="page">
+        <div id="title">
+            <img id="logo" src="https://github.com/MorchClient/images/blob/main/minecraftDot.png?raw=true" /><br>
+            <div id="buttons"><a>downloads</a><a>docs</a></div>
+        </div>
+        <h1>Welcome to Morch Client!</h1>
+        <p>Discover a new way to customize your Minecraft experience with Morch, a script loader that brings
+            modding-like capabilities directly into the game.</p>
+        <p>As one of the pioneers in in-game scripting, Morch allows you to modify the core game mechanics seamlessly
+            without external tools. Utilizing <a href="https://openjdk.org/projects/nashorn/">Nashorn</a>, the powerful
+            JavaScript engine, you can write and execute scripts on-the-fly, unleashing your creativity within the
+            Minecraft universe.</p>
+        <p>Get ready to explore the endless possibilities Morch offers for in-game customization. It's not just modding;
+            it's scripting, right where you play!</p>
+
+    </div>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        #page {
+            min-height: 100vh;
+            /* Ensure the #page is at least the height of the viewport */
+            box-sizing: border-box;
+            width: 640px;
+            margin: auto;
+            background-color: #fff;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 700;
+        }
+
+        #buttons a {
+            padding-left: 5px;
+            padding-right: 5px;
+            cursor: pointer;
+        }
+
+        #buttons a:hover {
+            background-color: #394688;
+            user-select: none;
+        }
+
+        img {
+            user-drag: none;
+            -webkit-user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+
+        #title {
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            background-color: #596dd1;
+            color: #fff;
+        }
+
+        #title::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        #logo {
+            width: 100px;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        body {
+            background-color: #000;
+        }
+    </style>
+</body>
+
+</html>
