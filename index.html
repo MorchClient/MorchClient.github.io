@@ -1,25 +1,27 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morch Docs</title>
+    <title>Morch Client</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
         rel="stylesheet">
 </head>
 
 <body>
     <div id="page">
         <div id="title">
-            <img id="logo" src="https://github.com/MorchClient/images/blob/main/minecraftDot.png?raw=true" /><br>
-            <div id="buttons"><a>downloads</a><a>docs</a></div>
+            <a href="https://morchclient.github.io"><img id="logo"
+                    src="https://github.com/MorchClient/images/blob/main/minecraftDot.png?raw=true"></a><br>
+        </div>
+        <div id="effect">
+            <div id="buttons"><a href="https://morchclient.github.io/downloads">downloads</a><a href="https://morchclient.github.io/docs">docs</a><a href="https://github.com/MorchClient">github</a></div>
         </div>
         <h1>Welcome to Morch Client!</h1>
         <p>Discover a new way to customize your Minecraft experience with Morch, a script loader that brings
@@ -41,20 +43,37 @@
 
         #page {
             min-height: 100vh;
-            /* Ensure the #page is at least the height of the viewport */
             box-sizing: border-box;
-            width: 640px;
+            width: 100%;
             margin: auto;
-            background-color: #272727;
+            background-color: #040E18;
             font-family: "Roboto", sans-serif;
             font-weight: 400;
             font-style: normal;
+            color: #ffffff;
+        }
+
+        #effect a {
+            color: #fff;
+        }
+
+        a:any-link {
+            color: #94b0d4;
+            text-decoration: none;
+
         }
 
         h1,
         h2,
         h3 {
             font-weight: 700;
+            margin-left: 10px;
+            /* Set the common margin for h1, h2, h3 */
+        }
+
+        p {
+            margin-left: 10px;
+            /* Set the margin for paragraphs */
         }
 
         #buttons a {
@@ -64,8 +83,12 @@
         }
 
         #buttons a:hover {
-            background-color: #394688;
+            color: rgb(119, 132, 199);
             user-select: none;
+        }
+
+        #buttons {
+            text-align: center;
         }
 
         img {
@@ -75,13 +98,20 @@
             -moz-user-select: none;
             -webkit-user-select: none;
             -ms-user-select: none;
+            align-content: center;
         }
 
         #title {
+            background: rgb(89, 109, 210);
+            text-align: center;
+        }
+
+        #effect {
             font-family: "Bebas Neue", sans-serif;
             font-weight: 400;
             font-style: normal;
-            background-color: #596dd2;
+            height: 25px;
+            background: linear-gradient(180deg, rgba(89, 109, 210, 1) 0%, rgba(4, 14, 24, 1) 100%);
             color: #fff;
         }
 
@@ -95,10 +125,11 @@
             width: 100px;
             margin-left: 10px;
             margin-top: 10px;
+            margin-bottom: 10px;
         }
 
         body {
-            background-color: #000;
+            background-color: #272727;
         }
     </style>
 </body>
