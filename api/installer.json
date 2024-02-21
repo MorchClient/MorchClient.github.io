@@ -1,0 +1,6 @@
+{
+  "source": "https://github.com/MorchClient/morchsource/tree/jars",
+  "jars": ["morch-0-0-1", "morch-0-0-2"],
+  "name": ["0.0.1", "0.0.2"],
+  "version": ["1.8.8", "1.8.8"]
+}
