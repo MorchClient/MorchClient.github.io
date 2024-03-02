@@ -1,0 +1,47 @@
+/* Downloads.css */
+
+#downloads {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.version-container {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: border-color 0.25s, border-radius 0.25s;
+}
+
+.version-container h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.version-container:hover {
+    border-radius: 10px;
+    border-color: transparent;
+}
+
+.version-container:focus,
+.version-container:hover {
+    outline: 0px auto -webkit-focus-ring-color;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+span {
+    font-weight: bold;
+}
+
+#downloads button:hover {
+    border-color: #45a049;
+}

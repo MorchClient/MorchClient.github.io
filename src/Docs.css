@@ -1,0 +1,17 @@
+#docs{
+    text-align: left;
+    width: 85%;
+}
+.sub{
+    margin-left: 20px;
+}
+ul{
+    list-style-type:square;
+
+}
+code{
+    background-color: #1d1d1d;
+    color:#eeeeee;
+    padding: 2px;
+    text-align: left;
+}
