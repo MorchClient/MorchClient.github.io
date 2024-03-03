@@ -1,9 +1,9 @@
 {
   "1.8.8": {
-    versions: ["0.0.2", "0.0.1"],
-    links: ["https://mega.nz/file/cj0nHBIA", "https://mega.nz/file/YmcxEJaQ"],
-    isMega: true,
-    keys: [
+    "versions": ["0.0.2", "0.0.1"],
+    "links": ["https://mega.nz/file/cj0nHBIA", "https://mega.nz/file/YmcxEJaQ"],
+    "isMega": true,
+    "keys": [
       "9DjIfMWM1DggIBfk1D9QchlaY4Tua7yRRZjL9UxUv2o",
       "ZVbCdstmZbMm4vRztWn44QaQMllThpfcyLp52YOxUWw"
     ]
