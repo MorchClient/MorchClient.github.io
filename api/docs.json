@@ -1,5 +1,5 @@
 {
-   "classes":["console", "playerinv", "player", "chat", "fonts", "vars", "client"]
+   "classes":["console", "playerinv", "player", "chat", "fonts", "vars", "client"],
    "classMethodData":{
       "console":[
          "syslog",
