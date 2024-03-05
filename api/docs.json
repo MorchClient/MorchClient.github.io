@@ -1,4 +1,5 @@
 {
+   "classes":["console", "playerinv", "player", "chat", "fonts", "vars", "client"]
    "classMethodData":{
       "console":[
          "syslog",
