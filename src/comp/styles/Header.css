@@ -1,0 +1,48 @@
+#header {
+    background: #596dd2af;
+    backdrop-filter: blur(20px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Add space between image and links */
+    padding: 10px;
+    width: 100%; /* Adjust as needed */
+    max-width: calc(100% - 15%); /* Adjust as needed */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header img {
+    max-width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+#links {
+    display: flex; /* Use Flexbox for links container */
+}
+
+#header button {
+    background: none;
+    cursor: pointer;
+    padding: 0.4em 1em;
+    margin: 0px 2px;
+    color: #fff;
+}
+@media (prefers-color-scheme: light) {
+    #header button {
+      color: #fff;
+    }
+  }
+#header button:hover {
+    border-color: #fff;
+}
+
+/* Example content styling */
+section {
+    height: 1000px;
+    padding-top: 60px;
+    background: #f0f0f0;
+}
