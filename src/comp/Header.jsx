@@ -5,7 +5,7 @@ function Header() {
     return (
         <div id='header'>
             <Link to={"/"}><img
-                src='https://raw.githubusercontent.com/MorchClient/images/main/minecraftDot.png'
+                src='https://raw.githubusercontent.com/MorchClient/resources/images/minecraftDot.png'
                 alt='Logo'
                 width='50'
             /></Link>

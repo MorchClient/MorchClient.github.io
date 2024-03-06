@@ -14,14 +14,14 @@ function Docs() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://morchclient.github.io/api/docs.json');
+        const response = await fetch('https://raw.githubusercontent.com/MorchClient/resources/json/docs.json');
         const data = await response.json();
         setVersions(data);
       } catch (error) {
         console.error('Error fetching data:', error);
         return (
           <>
-            <Header/>
+            <Header />
             {error}
           </>
         )
@@ -50,26 +50,16 @@ function Docs() {
       <div id="docs">
         <h1>Tutorials</h1>
         <TutorList className="How to run Morch (MultiMC)" />
-        <TutorList className="How to run Morch (TLauncher)" />
         <h1>API</h1>
-        <ClassList className="console" />
-        <ClassList className="playerinv" />
-        <ClassList className="player" />
-        <ClassList className="chat" />
-        <ClassList className="font" />
-        <ClassList className="vars" />
-        <ClassList className="client" />
+        {json.classes.map((className) => (
+          <ClassList className={className} key={className} />
+        ))}
         <h1>Tutorials</h1>
         <TutorDocumentation className="How to run Morch (MultiMC)" />
-        <TutorDocumentation className="How to run Morch (TLauncher)" />
         <h1>API</h1>
-        <ClassDocumentation className="console" />
-        <ClassDocumentation className="playerinv" />
-        <ClassDocumentation className="player" />
-        <ClassDocumentation className="chat" />
-        <ClassDocumentation className="font" />
-        <ClassDocumentation className="vars" />
-        <ClassDocumentation className="client" />
+        {json.classes.map((className) => (
+          <ClassDocumentation className={className} key={className} />
+        ))}
       </div>
     </>
   );
@@ -125,35 +115,7 @@ function Docs() {
               <li>
                 Make a new Minecraft 1.8.8 instance
                 <br />
-                <img src="https://github.com/MorchClient/images/blob/main/obraz_2024-03-03_212628628.png?raw=true" />
-              </li>
-            </ul>
-          </>
-        ),
-      },
-      "How to run Morch (TLauncher)": {
-        Prerequisites: (
-          <>
-            <p>You need to have:</p>
-            <ul>
-              <li>
-                <Link to="../downloads">Downloaded</Link> the latest version of Morch
-              </li>
-              <li>
-                <a href="https://tlauncher.org/en/">TLauncher</a>
-              </li>
-            </ul>
-          </>
-        ),
-        'Downloading a version of Minecraft': (
-          <>
-            <p>Follow these steps:</p>
-            <ul>
-              <li>Open TLauncher</li>
-              <li>
-                Select version 1.8.8
-                <br />
-                <img src="https://github.com/MorchClient/images/blob/main/obraz_2024-03-05_180343116.png?raw=true" />
+                <img src="https://raw.githubusercontent.com/MorchClient/resources/images/obraz_2024-03-03_212628628.png?raw=true" />
               </li>
             </ul>
           </>
@@ -171,9 +133,6 @@ function Docs() {
     const classMethodData = {
       "How to run Morch (MultiMC)": [
         'Prerequisites', 'Setting up an Minecraft instance'
-      ],
-      "How to run Morch (TLauncher)": [
-        'Prerequisites', 'Downloading a version of Minecraft'
       ]
     };
     return classMethodData[className] || [];
@@ -283,7 +242,7 @@ function Docs() {
     };
     return classMethodData[className] || [];*/
     try {
-      return json.classMethodData[className] || "";
+      return json.classMethodData[className] || [];
     } catch (err) {
       return "";
     }

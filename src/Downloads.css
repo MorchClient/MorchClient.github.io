@@ -1,10 +1,37 @@
 /* Downloads.css */
 
 #downloads {
+    display: flex;
+    grid-template-columns: repeat(2, 150%);
+    text-align: center;
+    align-items: baseline;
+}
+#downloads-installer, #downloads-client {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    align-items: center;
+    border-radius: 10px;
+}
+#downloads-installer:hover, #downloads-client:hover {
+    transition: background-color 0.25s;
+    background-color: #45a04980;
+    
+}
+#downloads-installer {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(1, 100%);
     gap: 20px;
     padding: 20px;
+}
+
+#downloads-client {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    gap: 20px;
+    padding: 20px;
+    grid-area: span;
 }
 
 .version-container {
@@ -19,7 +46,7 @@
     margin-bottom: 10px;
 }
 
-.version-container li{
+.version-container li {
     list-style-type: none;
 }
 
