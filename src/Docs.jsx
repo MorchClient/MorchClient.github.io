@@ -117,6 +117,10 @@ function Docs() {
                 <br />
                 <img src="https://raw.githubusercontent.com/MorchClient/resources/images/obraz_2024-03-03_212628628.png?raw=true" />
               </li>
+              <li>Click the "Edit Instance" button on the Instance you just made.</li>
+              <li>Click the "Download All" button in the bottom right.</li>
+              <li>Use the "Replace minecraft.jar" button to replace Minecraft with the Morch .jar you recently downloaded.</li>
+              <li>Run the game! If you get any errors, try the troubleshoots below:</li>
             </ul>
           </>
         ),
