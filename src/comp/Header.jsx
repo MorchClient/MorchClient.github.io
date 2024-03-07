@@ -5,7 +5,7 @@ function Header() {
     return (
         <div id='header'>
             <Link to={"/"}><img
-                src='https://raw.githubusercontent.com/MorchClient/images/main/minecraftDot.png'
+                src='https://raw.githubusercontent.com/MorchClient/resources/images/minecraftDot.png'
                 alt='Logo'
                 width='50'
             /></Link>
@@ -13,6 +13,7 @@ function Header() {
                 <Link to={"/docs"}><button >Docs</button></Link>
                 <Link to={"/downloads"}><button >Downloads</button></Link>
                 <Link to={"https://github.com/morchclient"}><button >GitHub</button></Link>
+                <Link to={"https://discord.gg/WJmDhcctV8"}><button >Discord</button></Link>
             </div>
         </div>
     );

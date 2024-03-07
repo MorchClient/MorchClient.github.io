@@ -1,7 +1,6 @@
 import Header from "./comp/Header";
 
 function NotFound(){
-    document.title = "Morch Client - Not Found"
     return (
         <>
         <Header/>

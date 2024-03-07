@@ -1,17 +1,88 @@
-#docs{
+#docs {
     text-align: left;
     width: 85%;
 }
-.sub{
+
+.sub {
     margin-left: 20px;
 }
-ul{
-    list-style-type:square;
 
+.tutorials li {
+    margin-left: 20px;
 }
-code{
-    background-color: #1d1d1d;
-    color:#eeeeee;
+
+.tutorials img {
+    width: 70%;
+    /**display: block;
+    margin-left: auto;
+    margin-right: auto;*/
+}
+
+ul,
+li {
+    list-style-type: square;
+}
+
+code {
+    background: #1d1d1d;
+    color: #fff;
     padding: 2px;
     text-align: left;
+    overflow-anchor: none;
+    width: 100%;
+
+}
+
+code:hover {
+    text-decoration: underline;
+}
+
+pre code .hljs {
+    display: flex;
+    flex-flow: row;
+}
+
+.jscode:hover {
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+#copy {
+    display: none;
+}
+
+.tu {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    background-color: transparent;
+    font-weight: normal;
+}
+
+p {
+    font-weight: normal;
+    font-size: 16px;
+}
+
+pre code.hljs {
+    background: rgba(0, 0, 0, 127.5);
+    color: rgba(255, 255, 255, 127.5);
+}
+
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+    color: rgb(209, 155, 55);
+}
+
+@media (prefers-color-scheme: light) {
+    code {
+        background: #eeeeee;
+        color: #000;
+    }
+
+    pre code.hljs {
+        background: #d4d4d4;
+        color: #000;
+    }
 }
