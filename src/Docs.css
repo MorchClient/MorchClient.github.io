@@ -11,11 +11,13 @@
     margin-left: 20px;
 }
 
-.tutorials img {
-    width: 70%;
-    /**display: block;
-    margin-left: auto;
-    margin-right: auto;*/
+.small{
+    width: 60%;
+}
+
+img {
+    height: auto;
+    image-rendering: pixelated;
 }
 
 ul,

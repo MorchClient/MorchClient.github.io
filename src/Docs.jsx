@@ -112,16 +112,23 @@ function Docs() {
             <p>Follow these steps:</p>
             <ul>
               <li>Open MultiMC</li>
+                <img className="small" src="https://github.com/MorchClient/resources/blob/images/obraz_2024-03-07_184600855.png?raw=true" />
               <li>
                 Make a new Minecraft 1.8.8 instance
                 <br />
-                <img src="https://raw.githubusercontent.com/MorchClient/resources/images/obraz_2024-03-03_212628628.png?raw=true" />
+                <img className="small" src="https://raw.githubusercontent.com/MorchClient/resources/images/obraz_2024-03-03_212628628.png?raw=true" />
               </li>
-              <li>Click the "Edit Instance" button on the Instance you just made.</li>
-              <li>Click the "Download All" button in the bottom right.</li>
-              <li>Use the "Replace minecraft.jar" button to replace Minecraft with the Morch .jar you recently downloaded.</li>
-              <li>Run the game! If you get any errors, try the troubleshoots below:</li>
+              <li>
+                Click the &quot;Edit Instance&quot; button on the Instance you just made.
+                <br/>
+                </li>
+              <img src="https://github.com/MorchClient/resources/blob/images/obraz_2024-03-07_170427231.png?raw=true" />
+              <li>Click the &quot;Download All&quot; button in the bottom right.</li>
+              <img src="https://github.com/MorchClient/resources/blob/images/obraz_2024-03-07_174758916.png?raw=true" />
+              <li>Use the &quot;Replace minecraft.jar&quot; button to replace Minecraft with the Morch .jar you recently downloaded.</li>
             </ul>
+              <img className="small" src="https://github.com/MorchClient/resources/blob/images/morchclient.png?raw=true" /><br/>
+              Run the game! If you get any errors, try the troubleshoots below:
           </>
         ),
       }

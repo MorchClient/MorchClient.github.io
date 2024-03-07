@@ -59,6 +59,14 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+img{
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
