@@ -3,6 +3,10 @@
     width: 85%;
 }
 
+h2{
+    font-size:250%;
+}
+
 .sub {
     margin-left: 20px;
 }
@@ -32,10 +36,9 @@ code {
     text-align: left;
     overflow-anchor: none;
     width: 100%;
-
 }
 
-code:hover {
+.tree:hover, .tree:focus {
     text-decoration: underline;
 }
 
@@ -69,6 +72,8 @@ p {
 pre code.hljs {
     background: rgba(0, 0, 0, 127.5);
     color: rgba(255, 255, 255, 127.5);
+    width: 100%;
+    overflow: auto;
 }
 
 .hljs-regexp,

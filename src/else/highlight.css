@@ -58,7 +58,7 @@ pre code.hljs {
   }
   .hljs-built_in{
     font-weight: normal;
-    color:#fff;
+    color: inherit;
   }
   .hljs-symbol {
     /* prettylights-syntax-variable */

@@ -49,12 +49,14 @@ function Docs() {
       <h1>Docs</h1>
       <div id="docs">
         <h1>Tutorials</h1>
+        <TutorList className="How to get & run Morch (MC Launcher)" />
         <TutorList className="How to run Morch (MultiMC)" />
         <h1>API</h1>
         {json.classes.map((className) => (
           <ClassList className={className} key={className} />
         ))}
         <h1>Tutorials</h1>
+        <TutorDocumentation className="How to get & run Morch (MC Launcher)" />
         <TutorDocumentation className="How to run Morch (MultiMC)" />
         <h1>API</h1>
         {json.classes.map((className) => (
@@ -90,6 +92,60 @@ function Docs() {
 
   function getTutor(className, { id }) {
     const classMethodData = {
+      "How to get & run Morch (MC Launcher)": {
+        Prerequisites: (
+          <>
+            <p>You need to have:</p>
+            <ul>
+              <li>
+                <Link to="../downloads">Downloaded</Link> the latest version of the Morch installer
+              </li>
+              <li>
+                <a href="https://www.oracle.com/java/technologies/downloads/">Java</a> 14+
+              </li>
+              <li>
+                <a href="https://www.minecraft.net/pl-pl/download">Minecraft Launcher</a> (with an working Microsoft account)
+              </li>
+            </ul>
+          </>
+        ),
+        'Installing Morch': (
+          <>
+            <p>Follow these steps:</p>
+            <ul>
+              <li>Open the installer by using <code>java -jar morch-installer-[version].jar</code>
+                <img src="https://github.com/MorchClient/resources/blob/images/obraz_2024-03-16_115953839.png?raw=true" />
+              </li>
+              <li>
+                Select the version you want to run Morch
+              </li>
+              <li>
+                Install the client that you selected.
+                <br />
+                <img src="https://github.com/MorchClient/resources/blob/images/obraz_2024-03-16_120047617.png?raw=true" />
+              </li>
+            </ul>
+          </>
+        ),
+        'Running Morch': (
+          <>
+            <p>Follow these steps:</p>
+            <ul>
+              <li>Open the Minecraft Launcher, make a new instance, go to version, select the Morch version
+                <img src="https://github.com/MorchClient/resources/blob/images/obraz_2024-03-16_121922039.png?raw=true" />
+              </li>
+              <li>Go to more options, select the <code>javaw.exe</code> from the default Java 14+ instalation
+                <img className="small" src="https://github.com/MorchClient/resources/blob/images/obraz_2024-03-16_121946136.png?raw=true" /><br />
+              </li>
+              <li>
+                Run the game!<br/>
+                <img className="small" src="https://github.com/MorchClient/resources/blob/images/morchclient.png?raw=true" /><br />
+              </li>
+            </ul>
+            If you get any errors, try the troubleshoots below:
+          </>
+        ),
+      },
       "How to run Morch (MultiMC)": {
         Prerequisites: (
           <>
@@ -99,7 +155,7 @@ function Docs() {
                 <Link to="../downloads">Downloaded</Link> the latest version of Morch
               </li>
               <li>
-                <a href="https://www.oracle.com/java/technologies/downloads/">Java</a> 20 or higher
+                <a href="https://www.oracle.com/java/technologies/downloads/">Java</a> 14+
               </li>
               <li>
                 <a href="https://multimc.org/#Download">MultiMC</a> (Prism launcher also works)
@@ -111,8 +167,9 @@ function Docs() {
           <>
             <p>Follow these steps:</p>
             <ul>
-              <li>Open MultiMC</li>
+              <li>Open MultiMC<br />
                 <img className="small" src="https://github.com/MorchClient/resources/blob/images/obraz_2024-03-07_184600855.png?raw=true" />
+              </li>
               <li>
                 Make a new Minecraft 1.8.8 instance
                 <br />
@@ -120,15 +177,18 @@ function Docs() {
               </li>
               <li>
                 Click the &quot;Edit Instance&quot; button on the Instance you just made.
-                <br/>
-                </li>
-              <img src="https://github.com/MorchClient/resources/blob/images/obraz_2024-03-07_170427231.png?raw=true" />
-              <li>Click the &quot;Download All&quot; button in the bottom right.</li>
-              <img src="https://github.com/MorchClient/resources/blob/images/obraz_2024-03-07_174758916.png?raw=true" />
+                <br />
+                <img src="https://github.com/MorchClient/resources/blob/images/obraz_2024-03-07_170427231.png?raw=true" />
+              </li>
+              <li>Click the &quot;Download All&quot; button in the bottom right.<br/>
+                <img className="small" src="https://github.com/MorchClient/resources/blob/images/obraz_2024-03-07_174758916.png?raw=true" />
+              </li>
               <li>Use the &quot;Replace minecraft.jar&quot; button to replace Minecraft with the Morch .jar you recently downloaded.</li>
+              <li>Run the game!<br />
+                <img className="small" src="https://github.com/MorchClient/resources/blob/images/morchclient.png?raw=true" /><br />
+              </li>
             </ul>
-              <img className="small" src="https://github.com/MorchClient/resources/blob/images/morchclient.png?raw=true" /><br/>
-              Run the game! If you get any errors, try the troubleshoots below:
+            If you get any errors, try the troubleshoots below:
           </>
         ),
       }
@@ -142,6 +202,9 @@ function Docs() {
 
   function getTutorMethods(className) {
     const classMethodData = {
+      "How to get & run Morch (MC Launcher)": [
+        'Prerequisites', 'Installing Morch', 'Running Morch'
+      ],
       "How to run Morch (MultiMC)": [
         'Prerequisites', 'Setting up an Minecraft instance'
       ]
@@ -166,8 +229,8 @@ function Docs() {
                 <Link to={`/docs#${className + content}tree`}>
                   <code id={className + content}>{content}</code>
                 </Link>
-                <p>{getTutor(className, { id: content })}</p>
               </h2>
+                <p>{getTutor(className, { id: content })}</p>
             </div>
           ))}
         </ul>
@@ -182,13 +245,13 @@ function Docs() {
       <div>
         <li>
           <Link to={`/docs#${className}`}>
-            <code id={className + 'tree'}>{className}</code>
+            <code className='tree' id={className + 'tree'}>{className}</code>
           </Link>
         </li>
         {classMethods.map((method) => (
           <li key={method} className="sub">
             <Link to={`/docs#${className + method}`}>
-              <code id={className + method + 'tree'}>{method}</code>
+              <code className='tree' id={className + method + 'tree'}>{method}</code>
             </Link>
           </li>
         ))}
