@@ -46,15 +46,22 @@ function Downloads() {
       <div id="downloads">
         <div id="downloads-client">
           <h1>Client</h1><br />
-          {Object.entries(versions.client).map(([version, data]) => (
-            <Version key={version} version={version} data={data} />
-          ))}
+          <div className='versions'>
+            {Object.entries(versions.client).map(([version, data]) => (
+              <Version key={version} version={version} data={data} />
+            ))}
+          </div>
         </div>
         <div id="downloads-installer">
           <h1>Installer</h1><br />
-          {Object.entries(versions.installer).map(([version, data]) => (
-            <Installer key={version} version={version} data={data} />
-          ))}
+          <div className='versions'>
+            <div className="version-container">
+              <h2>Installer v{Object.keys(versions.installer)[0]}</h2>
+              {Object.entries(versions.installer).map(([version, data]) => (
+                <Installer key={version} version={version} data={data} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </>
@@ -64,35 +71,29 @@ function Downloads() {
 function Installer({ version, data }) {
   if (data.released) {
     return (
-      <div className="version-container">
-        <h2>{`Minecraft ${version}`}</h2>
-        <ul>
-          {data.isMega ? (
-            <Link to={data.link[0] + "#" + data.key[0]}>
-              <button>Download</button>
-            </Link>
-          ) : (
-            <Link to={data.links[0]}>
-              <button>
-                <a href={data.links[0]} download>
-                  Download
-                </a>
-              </button>
-            </Link>
-          )}
-        </ul>
-      </div>
+      <ul>
+        <span>{`v${version}: `}</span>
+        {data.isMega ? (
+          <Link to={data.link[0] + "#" + data.key[0]}>
+            <button>Download</button>
+          </Link>
+        ) : (
+          <Link to={data.links[0]}>
+            <button>
+              <a href={data.links[0]} download>
+                Download
+              </a>
+            </button>
+          </Link>
+        )}
+      </ul>
     )
   } else {
     return (
-      <>
-        <div className="version-container">
-          <h2>{`Installer ${version}`}</h2>
-          <ul>
-            <button>Coming soon!</button>
-          </ul>
-        </div>
-      </>
+      <ul>
+        <span>{`v${version}: `}</span>
+        <button>Coming soon!</button>
+      </ul>
     )
   }
 }

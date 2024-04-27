@@ -20,33 +20,40 @@
 
 #downloads-installer:hover,
 #downloads-client:hover {
-    box-shadow: 5px 5px 15px 2px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.5);
     transition: background-color 0.25s;
     background-color: #45a04980;
 
 }
 
-#downloads-installer {
-    display: grid;
-    grid-template-columns: repeat(1, 100%);
-    gap: 20px;
-    padding: 20px;
+/* Apply the hover effect to .version-container when #downloads-installer or #downloads-client is hovered */
+#downloads-installer:hover .version-container,
+#downloads-client:hover .version-container {
+    border-radius: 10px;
+    border-color: transparent;
+    outline: none;
+    background-color: #242424;
+    transition: background-color 0.25s, box-shadow 0.25s;
+    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.5);
 }
 
-#downloads-client {
-    display: grid;
-    grid-template-columns: repeat(1, 100%);
-    gap: 20px;
-    padding: 20px;
-    grid-area: span;
+.versions {
+    overflow-y: auto;
+    height: 250px;
 }
 
 .version-container {
     padding: 10px;
+    margin: 20px;
     border-radius: 10px;
+    margin-bottom: 20px;
     border: 1px solid #ddd;
     transition: border-color 0.25s, border-radius 0.25s;
     transition: box-shadow 0.25s;
+}
+
+.version-container h1 {
+    padding-bottom: 30px;
 }
 
 .version-container h2 {
@@ -58,17 +65,9 @@
     list-style-type: none;
 }
 
-.version-container:hover {
-    border-radius: 10px;
-    border-color: transparent;
-}
-
 .version-container:focus,
 .version-container:hover {
     outline: 0px auto -webkit-focus-ring-color;
-    background-color: #242424;
-    transition: background-color 0.25s;
-    box-shadow: 5px 5px 15px 2px rgba(0,0,0,0.5);
 }
 
 ul {
@@ -87,9 +86,10 @@ span {
 #downloads button:hover {
     transition: box-shadow 0.25s;
 }
+
 #downloads button:hover {
     border-color: #45a049;
-    box-shadow: 5px 5px 15px 2px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.5);
 }
 
 @media (prefers-color-scheme: light) {
